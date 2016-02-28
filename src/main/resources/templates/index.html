@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>spring-boot-sample-data-jpa-h2</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <h1>spring-boot-sample-data-jpa-h2</h1>
+    <h2>Demo project for Spring Boot with JPA and persisting H2 database</h2>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <th>#</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    </thead>
+    <tbody>
+    <tr th:each="person : ${personList}">
+      <td th:text="${person.id}"></td>
+      <td th:text="${person.firstname}"></td>
+      <td th:text="${person.lastname}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
