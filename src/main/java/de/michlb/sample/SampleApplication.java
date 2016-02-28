@@ -19,7 +19,6 @@ public class SampleApplication {
     PersonRepository personRepository = context.getBean(PersonRepository.class);
     personRepository.save(new Person("Hans", "Meiser"));
     personRepository.save(new Person("Peter", "Lustig"));
-    personRepository.save(new Person("Stefan", "Kopp"));
   }
 
 }
