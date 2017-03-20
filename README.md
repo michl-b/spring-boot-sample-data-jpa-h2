@@ -25,3 +25,9 @@ spring.datasource.driverClassName:org.h2.Driver
 # Disable Thymeleaf cache for development
 spring.thymeleaf.cache=false
 ```
+
+
+## concourse
+fly -t example login -c http://localhost:8080
+
+fly -t example set-pipeline --pipeline spring-boot-sample-data-jpa-h2 --config concourse-pipeline.yml   
