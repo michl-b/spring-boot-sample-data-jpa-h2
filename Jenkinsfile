@@ -17,7 +17,7 @@ node {
       }
    }
    stage('Test') {
-      // Run the maven build
+      // Run the maven test
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' test"
       } else {
