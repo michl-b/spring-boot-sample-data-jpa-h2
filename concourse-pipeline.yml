@@ -4,19 +4,12 @@ resources:
     source:
       uri: https://github.com/michl-b/spring-boot-sample-data-jpa-h2.git
       branch: master
-  - name: time
-    type: time
-    source:
-      interval: 60s
-
 
 jobs:
-  - name: maven-package
+  - name: package
     plan:
-    - aggregate:
-      - get: git-repo
-        trigger: true
-      - get: time
-    - task: maven-package
+    - get: git-repo
+      trigger: true
+    - task: package
       privileged: true
-      file: git-repo/concourse-pipeline/maven-package.yml
+      file: git-repo/concourse-pipeline/package.yml

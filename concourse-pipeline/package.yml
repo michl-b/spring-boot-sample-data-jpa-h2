@@ -1,0 +1,14 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: maven
+    tag: latest
+
+inputs:
+  - name: git-repo
+
+run:
+  path: "mvn"
+  args: ["-f", "git-repo/pom.xml", "package"]
