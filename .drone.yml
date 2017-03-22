@@ -1,5 +1,6 @@
-build:
-  image: maven:3.3.3-jdk-8-onbuild
-  pull: true
-  commands:
-    - mvn clean install
+pipeline:
+  build:
+    image: maven
+    pull: true
+    commands:
+      - mvn clean package
