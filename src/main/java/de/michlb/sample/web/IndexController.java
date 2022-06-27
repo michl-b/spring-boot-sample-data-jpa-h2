@@ -27,3 +27,4 @@ public class IndexController {
     return "index"; // return index.html Template
   }
 }
+
